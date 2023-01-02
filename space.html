@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+
+    <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
+    integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+    crossorigin=""
+  />
+    <link rel="stylesheet" href="dataform.css">
+
+    <style>
+        #issMap{
+            height: 380px;
+        }
+     </style>
+</head>
+<body>
+
+                <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off" style="width:500px">
+                    <div >
+                        <label>Location Type</label><label class="validation-error hide" id="fullNameValidationError">This field is required.</label>
+                        <input type="text" name="locationType" id="locationType">
+                    </div>
+                    <div>
+                        <label>Latitude</label><label class="validation-error hide" id="fullNameValidationError">This field is .</label>
+                        <input type="num" name="latitude" id="latitude" class="lats">
+                    </div>
+                    <div>
+                        <label>Longitude</label>
+                        <input type="num" name="longitude" id="longitude" class="longs">
+                    </div>
+                    <div>
+                        <label>Location Name</label>
+                        <input type="text" name="locationName" id="locationName">
+                    </div>
+                    <div>
+                        <label>Data-legend-Color</label>
+                        <input type="color" id="color" name="color" value="color" style=" margin:20px">
+                    </div>
+                    <!-- <div>
+                        <div id="d" style="margin-left: 90px;"></div>
+                        <label>Radius</label>
+                        <input type="range" value="radius" id="r" style="margin-left:30px ">
+
+                    </div> -->
+                    <div>
+                        <div id="d" style="margin-left: 90px;"></div>
+                        <label>Radius</label>
+                        <input type="text" value="1234567" id="r" style="margin-left:30px ">
+
+                    </div>
+                    <div  class="form-action-buttons" >
+                        <input type="submit" value="Add" >
+                    </div>
+
+                </form>
+            <!-- <td> -->
+                <table class="list" id="tableList" style="margin-top: 50px;">
+                    <thead>
+                        <tr>
+                            <th>Location type</th>
+                            <th>Latitude</th>
+                            <th>Longitude</th>
+                            <th>Location Name</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <p>latitude <span id="lat"></span></p><br/>
+    <p>longitude <span id="lon"></span></p>
+    <!-- <button onclick="showOn()" id="showButton">show</button> -->
+      <button onclick=fullScreenView()>big</button>
+
+    <div id="issMap">
+    </div>
+
+    <script
+    src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
+    integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
+    crossorigin=""
+  ></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="./satellite.min.js"></script>
+  <script src="dataformmm.js"></script>
+  <script src="mappointtt.js"></script>
+</body>
+
+</html>
